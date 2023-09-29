@@ -9,7 +9,7 @@ import Button from './Button/Button';
 export default class App extends Component {
   state = {
     URL: 'https://pixabay.com/api/',
-    API_KEY: '25766392-01b12b6ed5ab34bc2910d9c3e',
+    API_KEY: '38161796-6c90593725f00dcf882dd20e0',
     pictures: [],
     error: '',
     status: 'idle',
@@ -48,7 +48,7 @@ export default class App extends Component {
       .catch(error => this.setState({ error, status: 'rejected' }));
   };
 
-  componentDidUpdate(prevState) {
+  componentDidUpdate(prevProps, prevState) {
     if (this.state.query !== prevState.query) {
       this.setState({ status: 'pending', pictures: [], page: 1 });
       this.fetchImg();
