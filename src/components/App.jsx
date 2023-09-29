@@ -20,7 +20,7 @@ export default class App extends Component {
 
   fetchImg = () => {
     return fetch(
-      `${this.state.URL}?q=${this.state.query}&page=${this.state.page}&key=${this.state.API_KEY}&image_type=photo&orientation=horizontal&per_page=15`
+      `${this.state.URL}?q=${this.state.query}&page=${this.state.page}&key=${this.state.API_KEY}&image_type=photo&orientation=horizontal&per_page=12`
     )
       .then(res => {
         if (res.ok) {
