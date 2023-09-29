@@ -12,7 +12,6 @@ export default class ImageGalleryItem extends Component {
   }
 }
 
-
 ImageGalleryItem.propTypes = {
   id: PropTypes.number.isRequired,
   smallImgURL: PropTypes.string.isRequired,

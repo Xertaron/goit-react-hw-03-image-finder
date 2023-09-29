@@ -2,7 +2,7 @@
   top: 0;
   left: 0;
   position: sticky;
-  z-index: 1100;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   color: #fff;
-  background-color: #461646;
+  background: linear-gradient(rgb(116, 0, 131)35%, rgb(112, 80, 253));
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }
@@ -29,8 +29,8 @@
 
 .searchFormButton {
   display: inline-block;
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 33px;
   border: 0;
   opacity: 0.6;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -61,8 +61,7 @@
   font-size: 20px;
   border: none;
   outline: none;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding: 5px 4px;
 }
 
 .SearchFormInput::placeholder {

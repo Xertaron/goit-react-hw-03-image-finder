@@ -20,7 +20,7 @@ export default class App extends Component {
 
   fetchImg = () => {
     return fetch(
-      `${this.state.URL}?q=${this.state.query}&page=${this.state.page}&key=${this.state.API_KEY}&image_type=photo&orientation=horizontal&per_page=12`
+      `${this.state.URL}?q=${this.state.query}&page=${this.state.page}&key=${this.state.API_KEY}&image_type=photo&orientation=horizontal&per_page=15`
     )
       .then(res => {
         if (res.ok) {
@@ -30,7 +30,7 @@ export default class App extends Component {
       })
       .then(pictures => {
         if (!pictures.total) {
-          toast.error('Did not find anything');
+          toast.error('Cannot find more');
         }
         const selectedProperties = pictures.hits.map(
           ({ id, largeImageURL, webformatURL }) => {
@@ -77,7 +77,7 @@ export default class App extends Component {
     return (
       <>
         <Searchbar onSubmit={this.processSubmit} />
-        {pictures.length && <ImageGallery images={pictures} />}
+        {!!pictures.length && <ImageGallery images={pictures} />}
         {totalHits > pictures.length && (
           <Button onClick={this.handleLoadMore} />
         )}

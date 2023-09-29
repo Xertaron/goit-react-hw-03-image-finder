@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'; 
-import data from './Searchbar.module.css'
+import PropTypes from 'prop-types';
+import data from './Searchbar.module.css';
 import { toast } from 'react-toastify';
-
 
 export default class Searchbar extends Component {
   state = {
@@ -34,11 +33,11 @@ export default class Searchbar extends Component {
             type="text"
             autoComplete="off"
             autoFocus
-            placeholder="Search images and photos"
-            value = {this.state.query}
+            placeholder="Search Images and Photos"
+            value={this.state.query}
           />
           <button type="submit" className={data.searchFormButton}>
-            search
+            Search
           </button>
         </form>
       </header>
